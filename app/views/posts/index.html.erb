@@ -2,13 +2,28 @@
 
 <h1>Posts</h1>
 
+<%=params[:b]%>
+<%=params[:locale]%>
+<button><%= link_to "New post", new_post_path %></button>
+<%="the latest deleted post id is #{session[:id]}"%>
 <div id="posts">
-  <% @posts.each do |post| %>
-    <%= render post %>
-    <p>
-      <%= link_to "Show this post", post %>
-    </p>
+
+
+<ul>
+  
+    <% @posts.each do |post| %>
+      <li> 
+        <p>
+          <strong>Title:</strong>
+          <%= post.title %>
+        </p>
+      </li>
+      <p>
+        <%= link_to "Show this post", post %>
+      </p>
   <% end %>
+</ul>  
+    
 </div>
 
-<%= link_to "New post", new_post_path %>
+
