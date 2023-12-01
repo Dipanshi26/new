@@ -13,3 +13,18 @@
  *= require_tree .
  *= require_self
  */
+.notice{
+  color : green
+}
+.alert{
+  color : orange
+}
+.msg {
+  color : red 
+}
+.temp{
+  color: blue;
+}
+.error{
+  color: saddlebrown;
+}
